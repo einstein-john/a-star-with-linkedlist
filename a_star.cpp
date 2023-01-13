@@ -84,13 +84,13 @@ void aStar(struct node *temp) {
   if (temp->left == NULL) {
     a = temp->right->data + temp->right->cost;
   } else {
-    a = temp->left->data = temp->left->cost;
+    a = temp->left->data + temp->left->cost;
   } 
 
   if (temp->right == NULL) {
     b = a;
   } else {
-    b = temp->right->data = temp->right->cost;
+    b = temp->right->data + temp->right->cost;
   }
 
 //compare sum of heuristic value and cost to node
