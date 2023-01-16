@@ -96,15 +96,12 @@ void aStar(struct node *temp) {
 //compare sum of heuristic value and cost to node
   if (a < b) {
     cout << "L -> ";
-    if(a == 0)
-    return;
+   
     if (temp->left != NULL) {
       aStar(temp->left);
     }
   } else {
     cout << "R -> ";
-     if(b == 0)
-    return;
     if (temp->right != NULL) {
       aStar(temp->right);
     }
